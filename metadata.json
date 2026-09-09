@@ -1,0 +1,6 @@
+{
+  "name": "Mumbai Bazar",
+  "description": "Multi-vendor e-commerce platform with buyer, seller, admin, and super-admin portals, featuring product approval workflows, order tracking, sales analytics, and cash-on-delivery payments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

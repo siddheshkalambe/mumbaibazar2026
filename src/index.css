@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Modern Crisp Grey, White & Black palette (as requested) */
+  --color-stone-50: #FFFFFF;
+  --color-stone-100: #F4F4F5;
+  --color-stone-150: #E4E4E7;
+  --color-stone-200: #D4D4D8;
+  --color-stone-300: #A1A1AA;
+  --color-stone-400: #71717A;
+  --color-stone-500: #52525B;
+  --color-stone-600: #3F3F46;
+  --color-stone-700: #27272A;
+  --color-stone-800: #18181B;
+  --color-stone-850: #111111;
+  --color-stone-900: #09090B;
+  --color-stone-950: #020202;
+
+  /* Sleek modern dark mode (No warm browns) */
+  --color-zinc-950: #0A0A0A;
+  --color-zinc-900: #111111;
+  --color-zinc-850: #1A1A1A;
+  --color-zinc-800: #242424;
+  --color-zinc-700: #333333;
+  --color-zinc-600: #4D4D4D;
+  --color-zinc-500: #666666;
+  --color-zinc-400: #999999;
+  --color-zinc-300: #CCCCCC;
+  --color-zinc-250: #E5E5E5;
+  --color-zinc-200: #F5F5F5;
+  --color-zinc-150: #FAFAFA;
+  --color-zinc-100: #FFFFFF;
+
+  /* Premium High-End Shimmering Gold spectrum */
+  --color-amber-50: #FFFBF2;
+  --color-amber-100: #FDF1D5;
+  --color-amber-200: #F9E0A4;
+  --color-amber-300: #F4CD71;
+  --color-amber-400: #EBB542;
+  --color-amber-500: #D4A325; /* Imperial Signature Gold */
+  --color-amber-600: #B28319;
+  --color-amber-700: #8E6512;
+  --color-amber-800: #6D4C0C;
+  --color-amber-900: #553A09;
+  --color-amber-950: #332204;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-stone-50);
+  color: var(--color-stone-850);
+}
+
+/* Hide scrollbars globally across all browsers while maintaining scrolling functionality */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.dark body {
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-200);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom premium hover and animation effects */
+@keyframes subtle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-bounce-subtle {
+  animation: subtle-bounce 3s ease-in-out infinite;
+}
